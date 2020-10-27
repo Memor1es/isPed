@@ -28,9 +28,7 @@ function isPed(checkType)
     local pass = false
 
     if checkType == "cid" then
-        ESX.TriggerServerCallback("isPed:getIdentifier", function(cid)
-            pass = cid
-        end)
+        ESX.GetPlayerData().identifier
     end
 
     if checkType == "myJob" then
