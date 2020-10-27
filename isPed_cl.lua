@@ -115,18 +115,6 @@ function isPed(checkType)
     return pass
 end
 
-AddEventHandler("playerDropped", function(reason)
-    if ESX.PlayerData.job == "police" then
-        pdCount = pdCount - 1
-    elseif ESX.PlayerData.job == "ambulance" then
-        lsmsCount = lsmsCount - 1
-    elseif ESX.PlayerData.job == "taxi" then
-        taxiCount = taxiCount - 1
-    elseif ESX.PlayerData.job == "mechanic" then
-        mecCount = mecCount - 1
-    end
-end)
-
 RegisterNetEvent("updateNameClient")
 AddEventHandler("updateNameClient", function(firstname, lastname)
     Firstname = firstname
