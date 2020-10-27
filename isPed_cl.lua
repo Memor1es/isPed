@@ -23,21 +23,6 @@ Citizen.CreateThread(function()
     ESX.PlayerData = ESX.GetPlayerData()
 end)
 
-RegisterNetEvent('esx:setJob')
-AddEventHandler('esx:setJob', function(job)
-    ESX.PlayerData.job = job
-
-    if ESX.PlayerData.job == "police" then
-        pdCount = pdCount + 1
-    elseif ESX.PlayerData.job == "ambulance" then
-        lsmsCount = lsmsCount + 1
-    elseif ESX.PlayerData.job == "taxi" then
-        taxiCount = taxiCount + 1
-    elseif ESX.PlayerData.job == "mechanic" then
-        mecCount = mecCount + 1
-    end
-end)
-
 function isPed(checkType)
     local checkType = string.lower(checkType)
     local pass = false
